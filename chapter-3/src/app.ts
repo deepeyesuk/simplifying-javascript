@@ -10,6 +10,31 @@
 //     return updated
 // }
 
+// Map()
+
+// const dogs = [ 
+//     {    
+//         name: 'max',
+//         size: 'small',
+//         breed: 'boston terrier', 
+//         color: 'black'
+//     }, 
+//     {
+//         name: 'don',
+//         size: 'large', 
+//         breed: 'labrador',
+//         color: 'black' 
+//     },
+//     { 
+//         name: 'shadow', 
+//         size: 'medium', 
+//         breed: 'labrador', 
+//         color: 'chocolate' 
+//     }
+// ]
+
+// dogs.map((x) => { x.name ==})
+// const newDogs = dogs.filter((x) => {x.name.includes('a')})
 
 console.log('Tip 11 : Get started -----------')
 const defaults = { 
@@ -117,5 +142,27 @@ let errors2 = new Map(
     ]
 )
 console.log(errors2.get(100))
-
 console.log(errors2.keys()) // MapIterator { 100, 110, 200 } }
+
+console.log('Tip 14  -----------')
+
+const defaults14_1 = new Map()
+    .set('color', 'brown')
+    .set('breed', 'beagle')
+    .set('state', 'kansas');
+
+const filters14_1 = new Map()
+    .set('color', 'black');
+console.log(defaults14_1)
+console.log(defaults14_1.get('color'))
+console.log(filters14_1.get('color'))
+
+const filters14_2 = new Map()
+    .set('color', 'black')
+    .set('color', 'brown');
+console.log(filters14_2)
+console.log(filters14_2.get('color'))
+
+const combined = new Map([...defaults14_1, ...filters14_1])
+console.log(combined)
+console.log(combined.get('color'))
