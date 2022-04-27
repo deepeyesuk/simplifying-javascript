@@ -1,13 +1,10 @@
-const { it, expect } = require('@jest/globals')
 const _ = require('lodash')
 
-function convertWeight(weight, ounces, roundTo) {
-  const oz = ounces ? ounces / 16 : 0
-  const total = weight + oz
-  const conversion = weight / 2.2
-  const round = roundTo === undefined ? 2 : roundTo
+function convertWeight(weight, ounces = 0, roundTo = 2) {
+  const total = weight + (ounces / 16)
+  const conversion = total / 2.2
 
-  return _.round(conversion, round)
+  return _.round(conversion, roundTo)
 }
 
 it('should convert weight', () => {

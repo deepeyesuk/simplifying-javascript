@@ -1,8 +1,17 @@
 {
   "name": "simplifying-javascript",
   "dependencies": {
-    "jest": "^27.5.1",
+    "jest": "^28.0.2",
     "lodash": "^4.17.21"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.182",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  }
 }
