@@ -7,10 +7,10 @@ function convertWeight(weight, ounces = 0, roundTo = 2) {
   return _.round(conversion, roundTo)
 }
 
-it('should convert weight', () => {
+it('should use defaut values', () => {
   expect(convertWeight(100)).toBe(45.45)
 })
 
-it('should support custom round decimal point', () => {
+it('should use passed parameter values', () => {
   expect(convertWeight(4, 0, 2)).toBe(1.82)
 })
